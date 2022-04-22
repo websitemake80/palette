@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Palette</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/ico"/>
+        <link href="drawing.css" type="text/css" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    </head>
+    <body class="sec">
+        <ul class="thumb">
+            <li class="name">Background</li>
+            <li class="background"onclick="changeBgColor('#FF9933')"  style="background: #FF9933;"></li>
+            <li  class="background" onclick="changeBgColor('#FF9999')"  style="background: #FF9999;"></li>
+            <li  class="background" onclick="changeBgColor('#e60c2c')"  style="background: #e60c2c"></li>
+            <li  class="background" onclick="changeBgColor('#99FF99')"  style="background: #99FF99;"></li>
+            <li  class="background" onclick="changeBgColor('#87cefa')"  style="background: #87cefa;"></li>
+            <li  class="background" onclick="changeBgColor('#111111')"  style="background: #111111;"></li>
+            <li  class="background" onclick="changeBgColor('#EAD9FF')"  style="background: #EAD9FF;"></li>
+            <li  class="background" onclick="changeBgColor('dimgray')"  style="background: dimgray;"></li>
+        </ul>
+      <div class="field">
+          <canvas id="canvas"></canvas>
+          <div class="tools">
+              
+              <div onclick="change_color(this)" class="color-field" style="background: red;"></div>
+              <div onclick="change_color(this)" class="color-field" style="background: blue;"></div>
+              <div onclick="change_color(this)" class="color-field" style="background: green;"></div>
+              <div onclick="change_color(this)" class="color-field" style="background: yellow;"></div>
+              <div onclick="change_color(this)" class="color-field" style="background: pink;"></div>
+              <div onclick="change_color(this)" class="color-field" style="background: purple;"></div>
+              <div onclick="change_color(this)" class="color-field" style="background: brown;"></div>
+              <div onclick="change_color(this)" class="color-field" style="background: black;"></div>
+
+              <input onInput="draw_color = this.value" type="color" class="color-picker">
+              <input type="range" min="1" max="100" class="pen-range"
+               oninput="draw_width = this.value">
+               <button onclick="undo_last()"  type="button" class="button">やり直し</button>
+               <button onclick="clear_canvas()" type="button" class="button">消去</button>
+          </div>
+      </div>
+     
+</section>
+    <script>
+        function changeBgColor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+    </script>
+     
+    </body>
+    <script src="drawing.js"></script>
+</html>
