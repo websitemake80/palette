@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+
+
+
+body{
+    margin: 0;
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    background: #87cefa;
+    transition: 0.5s;
+}
+.thumb{
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%);
+    display: flex;
+    
+    
+}
+
+.thumb li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+.thumb .name{
+    color: white;
+    width: 120px;
+    height: 25px;
+    background: #87cefa;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid white;
+   
+}
+.thumb .background
+{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid white;
+ 
+}
+canvas {
+    margin-top: 20px;
+    box-shadow: -3px 2px 9px 6px dimgray;
+    cursor: pointer;
+    transition: 0.6s;
+}
+.tools {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 15px;
+   
+}
+.tools .color-field {
+    height: 40px;
+    width: 40px;
+    min-height: 40px;
+    min-width: 40px;
+    cursor: pointer;
+    display: inline-block;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid white;
+    align-self: center;
+    margin: 0 10px;
+    
+}
+
+.tools .button{
+    align-self: center;
+    width: 100px;
+    height: 40px;
+    border: 2px solid white;
+    cursor: pointer;
+    color: white;
+    background: #A4C6FF;
+    font-weight: bold;
+    margin: 0 10px;
+    border-radius: 20px;
+    
+
+}
+.color-picker {
+    align-self: center;
+    margin: 0 10px;
+    height: 50px;
+   
+
+}
+.pen-range {
+    align-self: center;
+    margin: 0 10px;
+    
+}
